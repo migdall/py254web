@@ -1,0 +1,9 @@
+[Unit]
+Description=uWSGI instance to serve helloapp
+
+[Service]
+ExecStartPre=-/usr/bin/bash -c 'mkdir -p /run/uwsgi; chown jnoland:nginx /run/uwsgi'
+ExecStart=/usr/bin/bash -c 'cd /home/jnoland/helloapp; source helloappenv/bin/activate; uwsgi --ini helloapp.ini'
+
+[Install]
+WantedBy=multi-user.target
