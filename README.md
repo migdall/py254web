@@ -21,5 +21,3 @@
     $ ./install_web_server.sh
     
 **Visit web page at http://whatever-ip-address**
-
-Example: http://138.68.255.234
